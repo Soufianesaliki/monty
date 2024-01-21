@@ -14,7 +14,7 @@ void f_add(stack_t **head, unsigned int counter)
 	head_stack = *head;
 	while (head_stack)
 	{
-		head_stack = head_stach->next;
+		head_stack = head_stack->next;
 		len++;
 	}
 	if (len < 2)
@@ -26,8 +26,8 @@ void f_add(stack_t **head, unsigned int counter)
 		exit(EXIT_FAILURE);
 	}
 	head_stack = *head;
-	tmp = head_stach->n + head_stach->next->n;
-	head_stach->next->n = tmp;
-	*head = head_stach->next;
+	tmp = head_stack->n + head_stack->next->n;
+	head_stack->next->n = tmp;
+	*head = head_stack->next;
 	free(head_stack);
 }
